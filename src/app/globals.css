@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "neue haas display";
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.typing-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.typing-container::before {
+  content: attr(data-text);
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  animation: typing 3s steps(40) infinite;
+}
+
+
+
+.spinner-border {
+  color: rgb(0, 0, 0) !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+button.btn.btn-danger {
+  background-color: #dc3545 !important;
+}
+
+button.btn.btn-dark {
+  background-color: #212529 !important;
+}
