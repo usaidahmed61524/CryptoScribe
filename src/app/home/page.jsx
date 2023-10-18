@@ -71,116 +71,6 @@ const Page = () => {
   const handleShow = () => setShow(true);
 
   return (
-    // <div className="bg-[#2f4f4f] h-[100vh]">
-    //   <div className="flex justify-between p-6">
-    //     <div className="w-full sm:w-auto text-center sm:text-left text-4xl sm:mb-0">
-    //       <Image src={Logo} className="mx-auto sm:mx-0 w-[150px] sm:w-[200px]" />
-    //     </div>
-    //     <div className="flex items-center gap-6 text-white">
-    //       <div className="text-base uppercase border-b  hover:border-b-white max-sm:hidden">
-    //         Home
-    //       </div>
-    //       <div className="text-base uppercase border-b  hover:border-b-white max-sm:hidden">
-    //         About
-    //       </div>
-    //       <div className="text-base uppercase border-b  hover:border-b-white max-sm:hidden">
-    //         Community
-    //       </div>
-
-    //       {loginBtnVisible ? (
-    //         <button
-    //           className="uppercase py-2 px-5 text-black bg-white rounded-3xl 
-    //         hover:bg-[#9EF948] hover:text-white"
-    //           onClick={handleShow}
-    //         >
-    //           Login With MMIT Domain
-    //         </button>
-    //       ) : (
-    //         <>
-    //           <button
-    //             className="uppercase py-2 px-5 text-black bg-white rounded-3xl 
-    //       hover:bg-[#9EF948] hover:text-white"
-    //             onClick={logOutUser}
-    //           >
-    //             Logout
-    //           </button>
-    //         </>
-    //       )}
-    //       {loading ? (
-    //         <div className="spinner-border" role="status">
-    //           <span className="visually-hidden">Loading...</span>
-    //         </div>
-    //       ) : (
-    //         <Modal show={show} onHide={handleClose}>
-    //           <Modal.Header closeButton>
-    //             <Modal.Title>Insert Your MMIT Domain</Modal.Title>
-    //           </Modal.Header>
-    //           <Modal.Body>
-    //             <Form>
-    //               <Form.Group className="mb-3" controlId="formBasicEmail">
-    //                 <Form.Control
-    //                   type="text"
-    //                   placeholder="Domain"
-    //                   onChange={(e) => {
-    //                     setDomain(e.target.value);
-    //                     setInputError("");
-    //                   }}
-    //                 />
-    //               </Form.Group>
-
-    //               <Form.Group className="mb-3" controlId="formBasicPassword">
-    //                 <Form.Control
-    //                   type="number"
-    //                   placeholder="Token Id"
-    //                   onChange={(e) => {
-    //                     setTokenId(e.target.value);
-    //                     setInputError("");
-    //                   }}
-    //                 />
-    //               </Form.Group>
-
-    //               <p className="text-danger my-2">{inputError}</p>
-    //             </Form>
-    //           </Modal.Body>
-    //           <Modal.Footer>
-    //             <Button variant="danger" onClick={handleClose}>
-    //               Close
-    //             </Button>
-    //             <Button variant="dark" onClick={onSubmit}>
-    //               Login
-    //             </Button>
-    //           </Modal.Footer>
-    //         </Modal>
-    //       )}
-    //     </div>
-    //   </div>
-    //   <div className="h-[70vh] flex items-end max-lg:flex-wrap">
-    //     <div className="px-8 max-lg:m-auto">
-    //       <p className="text-xl text-white mb-4 w-[295px]">
-    //         Porter enables creditworthy DAOs to obtain fixed-rate financing
-    //         using their project tokens as collateral.
-    //       </p>
-    //       <button
-    //         className="uppercase py-2 px-5 text-black bg-white border  rounded-3xl 
-    //       hover:bg-[#9EF948] hover:text-white w-[295px]"
-    //       >
-    //         Get Access
-    //       </button>
-    //       <br />
-    //     </div>
-    //     <div className="max-md:pl-8 max-sm:pl-4">
-    //       <p className="text-8xl text-white max-md:text-3xl">
-    //         Borrow with no liquidations against
-    //       </p>
-    //       <div
-    //         className="typing-container text-8xl text-white "
-    //         data-text="$WEB 3"
-    //       ></div>
-    //     </div>
-    //   </div>
-    // </div>
-
-
     <div className="bg-[#2f4f4f] min-h-screen px-4 py-6 sm:px-6 lg:px-8">
       <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
         <div className="mx-4 sm:mb-0">
@@ -261,9 +151,9 @@ const Page = () => {
           </Modal.Footer>
         </Modal>
       )}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-32">
         <div>
-          <p className="text-xl text-white mb-4">
+          <p className="text-2xl lg:text-6xl text-white mb-4">
           Creditworthy DAOs can obtain fixed-rate financing via Porter, using their project tokens as security.
           </p>
           <button
