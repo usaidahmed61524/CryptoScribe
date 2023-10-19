@@ -37,6 +37,10 @@
   color: rgb(0, 0, 0) !important;
 }
 
+button.btn-close {
+  display: none;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -46,5 +50,21 @@ button.btn.btn-danger {
 }
 
 button.btn.btn-dark {
-  background-color: #212529 !important;
+  background-color: #000000 !important;
+}
+
+
+.spinner-border {
+  display: inline-block !important;
+  width: 50px !important;
+  color: #083e3e !important;
+  position: fixed !important;
+  top: 50% !important;
+  height: 50px !important;
+  left: 50% !important;
+  vertical-align: -0.125em !important;
+  background-color: currentColor !important;
+  border-radius: 50% !important;
+  -webkit-animation: .75s linear infinite spinner-grow !important;
+  animation: .75s linear infinite spinner-grow !important;
 }

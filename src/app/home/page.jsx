@@ -17,6 +17,7 @@ const Page = () => {
   const [inputError, setInputError] = useState("");
   const [loading, setLoading] = useState(false);
   const [loginBtnVisible, setLoginBtnVisible] = useState(true);
+  const [userName, setUserName] = useState("");
 
 
 
@@ -43,6 +44,8 @@ const Page = () => {
     const uservalidator = response?.data?.data
     if (uservalidator.success == true) {
       setLoginBtnVisible(false);
+      const user = domain.slice(0, -5);
+      setUserName("welcome " + user)
       handleClose()
       setLoading(false);
     }
@@ -59,6 +62,7 @@ const Page = () => {
 
 
   const logOutUser = () => {
+    setUserName("");
     setLoginBtnVisible(true);
   };
 
@@ -73,23 +77,15 @@ const Page = () => {
   return (
     <div className="bg-[#2f4f4f] min-h-screen px-4 py-6 sm:px-6 lg:px-8">
       <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
-        <div className="mx-4 sm:mb-0">
-          <Image src={Logo} className="w-[150px] sm:w-[200px]" />
+        <div className="mx-4 sm:mb-4">
+          <Image src={Logo} className="w-[200px] sm:w-[250px]" />
         </div>
-        <div className="hidden sm:flex gap-6 text-white">
-          <div className="text-base uppercase border-b hover:border-b-white">
-            Home
-          </div>
-          <div className="text-base uppercase border-b hover:border-b-white">
-            About
-          </div>
-          <div className="text-base uppercase border-b hover:border-b-white">
-            Community
-          </div>
-        </div>
+        <h2 className="text-center text-2xl text-white">{userName}</h2>
+
+
         {loginBtnVisible ? (
           <button
-            className="uppercase py-2 px-5 text-black bg-white rounded-3xl hover:bg-[#9EF948] hover:text-white"
+            className="uppercase sm:my-4 py-2 px-5 text-black bg-white rounded-3xl hover:bg-[#9EF948] hover:text-white"
             onClick={handleShow}
           >
             Login With MMIT Domain
@@ -154,7 +150,7 @@ const Page = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-32">
         <div>
           <p className="text-2xl lg:text-6xl text-white mb-4">
-          Creditworthy DAOs can obtain fixed-rate financing via Porter, using their project tokens as security.
+            Creditworthy DAOs can obtain fixed-rate financing via Porter, using their project tokens as security.
           </p>
           <button
             className="uppercase py-2 px-5 text-black bg-white border rounded-3xl hover:bg-[#9EF948] hover:text-white w-full lg:w-auto"
@@ -164,7 +160,7 @@ const Page = () => {
         </div>
         <div className="text-center lg:text-left">
           <p className="text-3xl lg:text-8xl text-white mb-4">
-          Obtain a loan without asset liquidation.
+            Obtain a loan without asset liquidation.
           </p>
           <div
             className="typing-container text-3xl lg:text-8xl text-white"
